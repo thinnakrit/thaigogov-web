@@ -1,0 +1,40 @@
+{
+  "name": "thaigogov-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/css": "^11.11.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@formatjs/intl": "^2.7.2",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/node": "20.1.0",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "axios": "^1.4.0",
+    "cookies-next": "^2.1.1",
+    "dayjs": "^1.11.7",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
+    "next": "13.4.1",
+    "next-cookies": "^2.0.3",
+    "numeral": "^2.0.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-intl": "^6.4.2",
+    "react-redux": "^8.0.5",
+    "react-svg": "^16.1.11",
+    "react-tiff": "^0.0.8",
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.1"
+  }
+}
