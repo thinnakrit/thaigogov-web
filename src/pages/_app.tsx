@@ -6,7 +6,7 @@ import LocaleProvider, { flattenMessages } from '@root/hooks/LocaleContext';
 import { messages } from '@root/locales';
 import store from '@root/stores';
 import getLocale from '@root/utils/locale/getLocale';
-//
+
 function MyApp({
   Component,
   pageProps,
@@ -15,10 +15,7 @@ function MyApp({
   locale: string;
 }) {
   return (
-    <LocaleProvider
-      locale={locale}
-      messages={flattenMessages(messages[locale])}
-    >
+    <LocaleProvider locale={locale} messages={flattenMessages(messages[locale])}>
       <Provider store={store}>
         <Component {...pageProps} />
       </Provider>
