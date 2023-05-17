@@ -27,14 +27,19 @@
     "numeral": "^2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-grid-system": "^8.1.9",
     "react-intl": "^6.4.2",
     "react-redux": "^8.0.5",
+    "react-responsive-carousel": "^3.2.23",
+    "react-stickynode": "^4.1.0",
     "react-svg": "^16.1.11",
     "react-tiff": "^0.0.8",
     "typescript": "5.0.4",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.1"
+    "@types/react-stickynode": "^4.0.0",
+    "@types/uuid": "^9.0.1",
+    "sass": "^1.62.1"
   }
 }

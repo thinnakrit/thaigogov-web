@@ -1,29 +1,12 @@
 import { messages } from '@root/locales';
 import { setCookie } from 'cookies-next';
-import React, {
-  PropsWithChildren,
-  useEffect,
-  useState,
-  useContext
-} from 'react';
-import {
-  useIntl,
-  createIntl,
-  createIntlCache,
-  IntlConfig,
-  MessageDescriptor,
-  RawIntlProvider
-} from 'react-intl';
+import React, { PropsWithChildren, useEffect, useState, useContext } from 'react';
+import { useIntl, createIntl, createIntlCache, IntlConfig, MessageDescriptor, RawIntlProvider } from 'react-intl';
 
 type localeType = IntlConfig['locale'];
 type messagesType = IntlConfig['messages'];
 
-export type TI18n = (
-  id: string,
-  values?: { [key: string]: string },
-  defaultMessage?: string,
-  options?: any
-) => string;
+export type TI18n = (id: string, values?: { [key: string]: string }, defaultMessage?: string, options?: any) => string;
 
 export const i18n: TI18n = (id, values, defaultMessage, options): string => {
   const intl = useIntl();
@@ -71,27 +54,17 @@ export interface ILocaleContextProps {
   locale: localeType;
   messages: messagesType;
   currentLocale: string | undefined;
-  i18n: (
-    id: string,
-    values?: { [key: string]: string },
-    defaultMessage?: string,
-    options?: any
-  ) => any;
+  i18n: (id: string, values?: { [key: string]: string }, defaultMessage?: string, options?: any) => any;
 }
 
 const LocaleContext = React.createContext<any>({
-  i18n: (
-    id: string,
-    values?: { [key: string]: string },
-    defaultMessage?: string,
-    options?: any
-  ): any => {},
+  i18n: (id: string, values?: { [key: string]: string }, defaultMessage?: string, options?: any): any => {},
   currentLocale: undefined as string | undefined,
   onChangeLocale: (locale: string) => {}
 });
 
 export const flattenMessages = (nestedMessages: any, prefix = '') => {
-  if (nestedMessages === null) {
+  if (nestedMessages === null || nestedMessages === undefined) {
     return {};
   }
   return Object.keys(nestedMessages).reduce((messages, key) => {
@@ -143,20 +116,12 @@ const IntlProvider = (
   }
 ) => {
   const [intl, setIntl] = useState(
-    createIntl(
-      { locale: props.locale, messages: flattenMessages(props.messages) },
-      cache
-    )
+    createIntl({ locale: props.locale, messages: flattenMessages(props.messages) }, cache)
   );
 
   const handleChangeLocale = async (nextLocale: localeType) => {
     setCookie('lang', nextLocale);
-    setIntl(
-      createIntl(
-        { locale: nextLocale, messages: flattenMessages(messages[nextLocale]) },
-        cache
-      )
-    );
+    setIntl(createIntl({ locale: nextLocale, messages: flattenMessages(messages[nextLocale]) }, cache));
   };
 
   const i18nContext = (
@@ -203,12 +168,7 @@ const IntlProvider = (
   };
 
   const handleSetIntl = () => {
-    setIntl(
-      createIntl(
-        { locale: props.locale, messages: flattenMessages(props.messages) },
-        cache
-      )
-    );
+    setIntl(createIntl({ locale: props.locale, messages: flattenMessages(props.messages) }, cache));
   };
 
   useEffect(() => {

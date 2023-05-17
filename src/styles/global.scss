@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-secondary);
+}
+
+* {
+  font-family: Ekachon !important;
+  --color-secondary: #F4F4FC;
+}
+
+
+@font-face {
+  font-family: Ekachon;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Ekachon-Regular.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/Ekachon-Italic.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Ekachon-Bold.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: italic;
+  font-weight: 500;
+  src: url("/fonts/Ekachon-BoldItalic.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/Ekachon-Bold.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: italic;
+  font-weight: 900;
+  src: url("/fonts/Ekachon-BoldItalic.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/Ekachon-Light.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: italic;
+  font-weight: 200;
+  src: url("/fonts/Ekachon-LightItalic.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Ekachon-Medium.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: italic;
+  font-weight: 600;
+  src: url("/fonts/Ekachon-MediumItalic.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/Ekachon-ExtraLight.otf") format("truetype")
+}
+
+@font-face {
+  font-family: Ekachon;
+  font-style: italic;
+  font-weight: 100;
+  src: url("/fonts/Ekachon-ExtraLightItalic.otf") format("truetype")
+}
+
