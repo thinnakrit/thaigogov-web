@@ -1,6 +1,7 @@
 import { NextPageContext } from 'next';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
+import { Analytics } from '@vercel/analytics/react';
 //
 import LocaleProvider, { flattenMessages } from '@root/hooks/LocaleContext';
 import { messages } from '@root/locales';
@@ -21,8 +22,12 @@ function MyApp({
   locale: string;
 }) {
   return (
-    <LocaleProvider locale={locale} messages={flattenMessages(messages[locale])}>
+    <LocaleProvider
+      locale={locale}
+      messages={flattenMessages(messages[locale])}
+    >
       <Provider store={store}>
+        <Analytics />
         <HeaderWrapper>
           <div>logo</div>
           <div>
