@@ -27,7 +27,7 @@ export const BoxRowWrapper = styled(Row)`
 
 export const BoxListWrapper = styled.div`
   border-radius: 1.14rem;
-  border: 1px solid rgb(227, 229, 250);
+
   background: rgb(255, 255, 255);
   margin-bottom: 10px;
   padding: 15px;
@@ -35,6 +35,8 @@ export const BoxListWrapper = styled.div`
   cursor: pointer;
   display: flex;
   flex: 1;
+  box-shadow: 0 20px 25px -5px rgb(150 150 180 / 40%),
+    0 10px 10px -5px rgb(150 150 180 / 20%);
 
   .__box-list-source {
     position: relative;

@@ -29,11 +29,11 @@ function MyApp({
       <Provider store={store}>
         <Analytics />
         <HeaderWrapper>
-          <div>logo</div>
-          <div>
-            <div>ค้นหา</div>
-            <div>ข่าวจากรัฐ</div>
-            <div>menu</div>
+          <div className="__header-left">logo</div>
+          <div className="__header-right">
+            <div className="__header-search">ค้นหา</div>
+            <div className="__header-menu">ข่าวจากรัฐ</div>
+            <div className="__header-option">menu</div>
           </div>
         </HeaderWrapper>
         <PageWrapper>
