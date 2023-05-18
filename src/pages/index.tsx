@@ -81,10 +81,6 @@ export default function Home() {
   return (
     <Fragment>
       <AsideWrapper>
-        <div className="__web-title">Thai Go to Government</div>
-        <div className="__web-desc">
-          รวมข้อมูลภาครัฐเพื่อ<u>ประชาชน</u>ชาวไทยโดยคนไทย
-        </div>
         <div>
           <SpecialSlideWrapper>
             <div className="__special-wrapper">
