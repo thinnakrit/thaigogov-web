@@ -197,7 +197,7 @@ const SpecialSlideWrapper = styled.div`
 
   .__special-title {
     h2 {
-      font-size: 40px;
+      font-size: 30px;
       overflow: hidden;
       text-align: left;
       text-overflow: ellipsis;
