@@ -10,9 +10,11 @@ import getLocale from '@root/utils/locale/getLocale';
 import { PageWrapper } from '@root/components/commons/layout/page';
 import { HeaderWrapper } from '@root/components/commons/layout/header';
 import { FooterWrapper } from '@root/components/commons/layout/footer';
+import PrimaryTemplate from '@root/components/template/PrimaryTemplate';
 //
 import '@root/styles/global.scss';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import '@root/styles/button.scss';
+import 'swiper/css';
 //
 function MyApp({
   Component,
@@ -28,18 +30,9 @@ function MyApp({
     >
       <Provider store={store}>
         <Analytics />
-        <HeaderWrapper>
-          <div className="__header-left">logo</div>
-          <div className="__header-right">
-            <div className="__header-search">ค้นหา</div>
-            <div className="__header-menu">ข่าวจากรัฐ</div>
-            <div className="__header-option">menu</div>
-          </div>
-        </HeaderWrapper>
-        <PageWrapper>
+        <PrimaryTemplate>
           <Component {...pageProps} />
-        </PageWrapper>
-        <FooterWrapper>xxx</FooterWrapper>
+        </PrimaryTemplate>
       </Provider>
     </LocaleProvider>
   );

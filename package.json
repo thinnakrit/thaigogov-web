@@ -30,10 +30,10 @@
     "react-grid-system": "^8.1.9",
     "react-intl": "^6.4.2",
     "react-redux": "^8.0.5",
-    "react-responsive-carousel": "^3.2.23",
     "react-stickynode": "^4.1.0",
     "react-svg": "^16.1.11",
     "react-tiff": "^0.0.8",
+    "swiper": "^9.3.2",
     "typescript": "5.0.4",
     "uuid": "^9.0.0"
   },

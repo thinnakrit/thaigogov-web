@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import styled from '@emotion/styled';
 import { Col } from 'react-grid-system';
 import { v4 as uuid } from 'uuid';
-
+//
 import {
   BoxListWrapper,
   BoxRowWrapper,
@@ -10,7 +10,10 @@ import {
   BoxWrapper
 } from '@root/components/commons/layout/box';
 import BoxList from '@root/components/widgets/box/BoxList';
+import ActivityList from '@root/components/widgets/slide/ActivityList';
+
 import { AsideWrapper } from '@root/components/commons/layout/aside';
+import Carousel from '@root/components/commons/carousel';
 //
 export default function Home() {
   const todayLsit = [
@@ -101,6 +104,78 @@ export default function Home() {
             </div>
           </SpecialSlideWrapper>
         </div>
+        <BoxTitleWrapper>โปรโมชั่นและส่วนลดจากภาครัฐ</BoxTitleWrapper>
+        <BoxWrapper fluid>
+          <Carousel
+            items={[
+              {
+                content: (
+                  <div
+                    style={{
+                      paddingTop: 25,
+                      paddingBottom: 50
+                    }}
+                  >
+                    <ActivityList
+                      title={'1'}
+                      shortDescription="ssss"
+                      sourceBackground="rgb(0, 128, 255)"
+                      sourceUrl={`https://prod-mfp-imgsrv.tillitsdone.com/uploads/medium__76d149dd4f.jpg`}
+                    />
+                  </div>
+                )
+              },
+              {
+                content: (
+                  <div style={{ paddingTop: 25, paddingBottom: 50 }}>
+                    <ActivityList
+                      title={'2'}
+                      shortDescription="ssss"
+                      sourceBackground="#ff8142"
+                      sourceUrl={`https://prod-mfp-imgsrv.tillitsdone.com/uploads/medium__76d149dd4f.jpg`}
+                    />
+                  </div>
+                )
+              },
+              {
+                content: (
+                  <div style={{ paddingTop: 25, paddingBottom: 50 }}>
+                    <ActivityList
+                      title={'3'}
+                      shortDescription="ssss"
+                      sourceBackground="rgb(0, 128, 255)"
+                      sourceUrl={`https://prod-mfp-imgsrv.tillitsdone.com/uploads/medium__76d149dd4f.jpg`}
+                    />
+                  </div>
+                )
+              },
+              {
+                content: (
+                  <div style={{ paddingTop: 25, paddingBottom: 50 }}>
+                    <ActivityList
+                      title={'4'}
+                      shortDescription="ssss"
+                      sourceBackground="rgb(0, 128, 255)"
+                      sourceUrl={`https://prod-mfp-imgsrv.tillitsdone.com/uploads/medium__76d149dd4f.jpg`}
+                    />
+                  </div>
+                )
+              },
+              {
+                content: (
+                  <div style={{ paddingTop: 25, paddingBottom: 50 }}>
+                    <ActivityList
+                      title={'5'}
+                      shortDescription="ssss"
+                      sourceBackground="rgb(0, 128, 255)"
+                      sourceUrl={`https://prod-mfp-imgsrv.tillitsdone.com/uploads/medium__76d149dd4f.jpg`}
+                    />
+                  </div>
+                )
+              }
+            ]}
+          />
+        </BoxWrapper>
         <BoxTitleWrapper>วันนี้คุณต้องการทำอะไร ?</BoxTitleWrapper>
         <BoxWrapper fluid>
           <BoxRowWrapper gutterWidth={10}>

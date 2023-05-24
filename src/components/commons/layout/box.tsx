@@ -69,3 +69,84 @@ export const BoxListWrapper = styled.div`
     font-weight: 300;
   }
 `;
+
+export const ActivityBoxListWrapper = styled.div(
+  ({
+    sourceBackground,
+    sourceUrl
+  }: {
+    sourceBackground?: string;
+    sourceUrl?: string;
+  }) => {
+    return `
+  border-radius: 1.14rem;
+  background: rgb(255, 255, 255);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  width: 350px;
+  height: 280px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 20px 25px -5px rgb(150 150 180 / 40%),
+    0 10px 10px -5px rgb(150 150 180 / 20%);
+  ransform-style: preserve-3d;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+  .__box-background-source {
+    position: absolute;
+    width: 350px;
+    height: 280px;
+    background-image: url(${sourceUrl});
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 350px;
+      height: 280px;
+      top: 0px;
+      left: 0px;
+      background-image: linear-gradient(
+        135deg,
+        ${sourceBackground} 0%,
+        rgba(0, 128, 255, 0) 70%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 2;
+    }
+  }
+
+  .__box-body {
+    position: relative;
+    z-index: 3;
+    padding: 25px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .__box-body-content {
+      color: #fff;
+
+      .__box-title {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .__box-desc {
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+  }
+`;
+  }
+);

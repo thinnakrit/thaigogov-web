@@ -1,24 +1,36 @@
 'use client';
 
-import { Carousel } from 'react-responsive-carousel';
+import { v4 as uuid } from 'uuid';
+import { ReactNode } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const CarouselWrapper = () => {
+const Carousel = ({ items }: { items: { content: ReactNode }[] }) => {
   return (
-    <Carousel emulateTouch infiniteLoop autoPlay>
-      <div style={{ height: 300 }}>
-        xxx
-        <p className="legend">Legend 1</p>
-      </div>
-      <div style={{ height: 300 }}>
-        sss
-        <p className="legend">Legend 2</p>
-      </div>
-      <div style={{ height: 300 }}>
-        qqq
-        <p className="legend">Legend 3</p>
-      </div>
-    </Carousel>
+    <Swiper
+      // slidesPerView={1}
+      spaceBetween={20}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40
+        },
+        1024: {
+          slidesPerView: 3.9,
+          spaceBetween: 50
+        }
+      }}
+    >
+      {items.map((item) => {
+        return <SwiperSlide key={uuid()}>{item.content}</SwiperSlide>;
+      })}
+    </Swiper>
   );
 };
 
-export default CarouselWrapper;
+export default Carousel;

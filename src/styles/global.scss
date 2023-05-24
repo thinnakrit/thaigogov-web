@@ -2,6 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: var(--color-secondary);
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 200;
 }
 
 * {
@@ -9,6 +12,15 @@ html, body {
   --color-secondary: #F4F4FC;
 }
 
+.__licence {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid rgb(227, 229, 250);
+}
+
+a {
+  color: #FF5B00;
+}
 
 @font-face {
   font-family: Ekachon;
