@@ -44,7 +44,7 @@ export default function DepartmentDetail() {
             </Col>
             <Col xs={12} md={8} xl={9}>
               <DepartmentCarousel>
-                <Carousel />
+                <Carousel items={[]} />
               </DepartmentCarousel>
               <BoxWrapper fluid>
                 <BoxRowWrapper gutterWidth={25}>

@@ -4,7 +4,12 @@ import { Col } from 'react-grid-system';
 import { v4 as uuid } from 'uuid';
 import Sticky from 'react-stickynode';
 //
-import { BoxListWrapper, BoxRowWrapper, BoxTitleWrapper, BoxWrapper } from '@root/components/commons/layout/box';
+import {
+  BoxListWrapper,
+  BoxRowWrapper,
+  BoxTitleWrapper,
+  BoxWrapper
+} from '@root/components/commons/layout/box';
 import BoxList from '@root/components/widgets/box/BoxList';
 import { AsideWrapper } from '@root/components/commons/layout/aside';
 import Carousel from '@root/components/commons/carousel';
@@ -39,7 +44,7 @@ export default function DepartmentDetail() {
             </Col>
             <Col xs={12} md={8} xl={9}>
               <DepartmentCarousel>
-                <Carousel />
+                <Carousel items={[]} />
               </DepartmentCarousel>
               <BoxWrapper fluid>
                 <BoxRowWrapper gutterWidth={25}>
